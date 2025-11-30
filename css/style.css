@@ -449,13 +449,14 @@
         gap: 50px;
     }
     .f1 , .f2 , .f3{
-        text-align: center;
         justify-content: center;
     }
     .ft-cont{
         justify-content: center;
     }
-    
+    .ft-btn{
+        display: none;
+    }
     
 }
 
