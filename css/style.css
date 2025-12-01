@@ -124,7 +124,7 @@
     font-size: 20px;
     color: gray;
     position: absolute;
-    bottom: -25px;
+    bottom: -30px;
     left: 0px;
     
 }
@@ -314,10 +314,7 @@
     .about{
         margin-inline: 50px;
     }
-    /* .abt{
-        margin: 50px 0px;
-    } */
-    
+   
 }
 
 
@@ -326,78 +323,96 @@
 .footer{
     background-color: var(--myblack);
     color: white;
+    
     padding: 50px 150px;
 }
+
 .fcols{
     display: flex;
     justify-content: space-between;
-    
+    gap: 40px;            
 }
+
+
+.f1, .f2, .f3{
+    flex: 1 1 0;
+}
+
 .socials{
     display: flex;
     gap: 20px;
     text-align: center;
-    margin: 0px 100px;
+    margin: 0;             
     justify-content: center;
 }
+
 .f1{
     display: flex;
     align-items: center;
-    gap: 50px; 
+    gap: 30px;
 }
+
 .socials a{
     font-size: 25px;
     color: white;
     text-decoration: none;
     cursor: pointer;
-    
 }
+
 .socials a:hover{
     color: var(--mypink);
     transition: 0.2s;
 }
+
 .f2{
     display: flex;
     flex-direction: column;
 }
+
 .qlinks a{
     display: block;
     color: gray;
     text-decoration: none;
     margin: 10px 0px;
 }
+
 .qlinks a:hover{
     color: var(--mypink);
     transition: 0.2s;
 }
+
 .ft-btn{
     margin-top: 20px;
 }
+
 .ft-btn a{
     border: 2px solid var(--mypink);
     color: white;
     font-weight: 700;
     padding :10px 15px;
     text-decoration: none;
-    
 }
+
 .ft-btn a:hover{
     background-color: var(--mypink);
     color: var(--myblack);
     transition: 0.2s;
 }
+
 .ft-hd{
     position: relative;
     margin-bottom: 30px;
     cursor: pointer;
 }
+
 .ft-tit{
     position: relative;
-    
 }
+
 .ft-tit h1{
     font-size: 30px;
 }
+
 .ft-hd h5{
     font-size: 20px;
     font-weight: 700;
@@ -406,9 +421,11 @@
     top: -20px;
     right:0px;
 }
+
 .ft-hd h5:hover{
     color: gray;
 }
+
 .ft-hd h4{
     font-size: 15px;
     color: gray;
@@ -416,48 +433,70 @@
     bottom: -25px;
     left: 0px; 
 }
+
 .f3 h4{
     margin-bottom: 20px;
 }
+
 .ft-cont{
     display: flex;
-    
     gap: 20px;
 }
+
 .ft-cont i{
     font-size: 20px;
     color: var(--mypink);
 }
+
 .ft-rem{
     text-align: center;
     margin-top: 50px;
     border-top: 2px solid gray;
     padding-top: 20px;
 }
+
 .ft-rem a{
     text-decoration: none;
     color: gray;
 }
+
 .ft-rem a:hover{
     color: white;
     transition: 0.2s;
 }
 
+/* ------------------ Responsive tweaks ------------------ */
+
 @media screen and (max-width: 1200px){
-    .fcols{
-        flex-direction: column;
-        gap: 50px;
-    }
-    .f1 , .f2 , .f3{
-        justify-content: center;
-    }
-    .ft-cont{
-        justify-content: center;
-    }
-    .ft-btn{
-        display: none;
+    .footer{
+        padding: 40px 20px;      /* smaller padding on tablets/mobiles */
     }
     
+    .fcols{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .f1, .f2, .f3{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+        align-items: center;
+    }
+
+    .f1{
+        justify-content: flex-start;
+    }
+
+    .ft-cont{
+        justify-content: flex-start;
+    }
+
+    .ft-btn{
+        /* show or hide depending on your design; I kept it visible */
+        margin-top: 15px;
+    }
 }
 
 /* ----------------------------------------------------- */
@@ -645,6 +684,8 @@
     padding: 10px 15px;
     border: 2px solid var(--mypink);
     font-weight: 700;
+    background-color: white;
+    color: var(--myblack);
 }
 .form-btn:hover{
     background-color: var(--mypink);
